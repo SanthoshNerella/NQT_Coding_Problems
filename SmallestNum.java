@@ -2,16 +2,29 @@ import java.util.*;
 public class SmallestNum {
         public static void main(String[] args) {
             Scanner sc = new Scanner(System.in);
-            int n = sc.nextInt();
-            int[] arr = new int[n];
-            for(int i = 0 ; i < n ; i++){
-                arr[i] = sc.nextInt();
+
+            // int n = sc.nextInt();
+            // int[] arr = new int[n];
+            // for(int i = 0 ; i < n ; i++){                              // when size of arr is given
+            //     arr[i] = sc.nextInt();
+            // }
+            // int min = Integer.MAX_VALUE;
+            // for(int num : arr){
+            //     if(num < min) min = num;
+            // }
+            // System.out.println("the Smallest elemnet in array is :" + min);
+            //---------------------------------------------------------------------------------------------------------------------------
+            String line = sc.nextLine();
+            String[] tokens = line.split("\\s+");
+            List<Integer> arr = new ArrayList<>();
+            for(String token : tokens){
+                arr.add(Integer.parseInt(token));
             }
             int min = Integer.MAX_VALUE;
             for(int num : arr){
                 if(num < min) min = num;
             }
-            System.out.println("the Smallest elemnet in array is :" + min);
+            System.out.println("Smallest number in arr is :" + min);
     }
     
 }
